@@ -1,0 +1,10 @@
+    char namasaya[50];
+    int umur;
+    printf("-------------- Input Biasa dengan scanf----------------\n");
+    printf("Masukkan nama : ");
+    scanf("%s", &namasaya);
+    printf("Masukkan umur : ");
+    scanf("%d", &umur);
+    printf("Nama : %s \n", namasaya);
+    printf("Umur : %d \n", umur);
+    printf("----------------------------------\n");
