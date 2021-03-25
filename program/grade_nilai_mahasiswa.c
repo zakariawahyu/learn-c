@@ -59,5 +59,4 @@ void main(){
     printf("Nilai mahasiswa : %d \n", nilai);
     printf("Grade Nilai : %c \n", grade);
     printf("Bobot Nilai : %g", bobot);
-    
 }

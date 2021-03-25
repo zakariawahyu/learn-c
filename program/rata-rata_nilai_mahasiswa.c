@@ -3,9 +3,10 @@
 void main(){
     printf("----- Program Menghitung Nilai Rata-Rata X Mahasiswa ----------\n");
 
-    int x_mahasiswa, nilai, total, average;
+    int x_mahasiswa, nilai, total, average, lulus = 0, tidaklulus = 0;
     int i = 1;
-    int max ,min;
+    int min, max;
+  
 
     printf("Masukkan jumlah mahasiswa : ");
     scanf("%d", &x_mahasiswa);
@@ -16,12 +17,18 @@ void main(){
         scanf("%d", &nilai);
         total = total + nilai;
 
-        if (nilai < min)
-        {
-            min = nilai;
-        } else if (nilai > max)
-        {
+        // Mengetahui nilai minimum dan max
+        if (nilai > max){
             max = nilai;
+        } else if (nilai < min) {
+            min = nilai;
+        }
+
+        // Mengetahui lulus atau tidaknya
+        if (nilai > 70){
+            lulus++;
+        } else {
+            tidaklulus++;
         }
         
         i++;
@@ -32,5 +39,7 @@ void main(){
     printf("Nilai rata-rata mahasiswa : %d \n", average);
     printf("Nilai minimum : %d \n", min);
     printf("Nilai max : %d \n", max);
+    printf("Jumlah mahasiswa lulus : %d \n", lulus);
+    printf("Jumlah mahasiswa tidak lulus : %d \n", tidaklulus);
     printf("----------------- Selesai ----------------------------");
 }
