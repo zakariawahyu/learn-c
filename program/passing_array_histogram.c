@@ -1,15 +1,12 @@
 #include <stdio.h>
+int panjangArray, angka;
+int i = 0;
+int array[] = {};
 
-void main(){
-    int panjangArray, angka;
-    int i = 0;
-
+void inputArray(){
     printf("PROGRAM PASSING HISTOGRAM DALAM ARRAY \n");
     printf("Massukkan panjang array : ");
     scanf("%d", &panjangArray);
-
-    // deklarasi array dan panjang berdasarkan inputan
-    int array[panjangArray];
 
     while (i < panjangArray){
         printf("Masukkan bilangan ke %d : ", i+1);
@@ -19,7 +16,10 @@ void main(){
         array[i] = angka;
         i++;
     }
-    printf("\n");
+}
+
+void histogramAray(){
+  printf("\n");
     printf("----------------------------------------------------\n");
     printf("Element\t\t\tValue\t\t\tHistogram \n");
     for (int j = 0; j < panjangArray; j++){
@@ -29,5 +29,10 @@ void main(){
         }
         printf("\n");
     }
-        printf("----------------------------------------------------");
+    printf("----------------------------------------------------");
+}
+
+void main(){
+   inputArray();
+   histogramAray();
 }
